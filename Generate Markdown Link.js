@@ -2,7 +2,7 @@
 // @name         Generate Markdown Link
 // @namespace    http://tampermonkey.net/
 // @version      1.3
-// @description  获取当前网站的网址和标题，并生成Markdown格式的链接，复制结果直接显示在按钮上
+// @description  获取当前网站的网址和标题，并在页面中央显示Markdown格式的链接，以及一个复制按钮。当用户点击复制按钮时，将链接复制到剪贴板并显示相应的成功与否的提示
 // @match      *://*/*
 // @grant        GM_setClipboard
 // ==/UserScript==
