@@ -57,7 +57,7 @@
 
     // 创建复制按钮
     const copyButton = document.createElement('button');
-    copyButton.innerHTML = 'Generate Markdown Link';
+    copyButton.innerHTML = '生成Markdown链接'';
     copyButton.style.cssText = buttonStyle;
 
     // 创建显示Markdown链接的元素
