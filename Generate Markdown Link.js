@@ -22,7 +22,7 @@
         border: none;
         cursor: pointer;
         border-radius: 5px;
-        font-size: 10px; /* 调小文字大小 */
+        font-size: 12px; /* 调小文字大小 */
     `;
 
     // 创建复制按钮样式
