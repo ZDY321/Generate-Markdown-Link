@@ -1,11 +1,14 @@
 // ==UserScript==
-// @name         Generate Markdown Link
+// @name         Markdown Link Generator
 // @namespace    http://tampermonkey.net/
 // @version      1.3
 // @description  获取当前网站的网址和标题，并在页面中央显示Markdown格式的链接，以及一个复制按钮。当用户点击复制按钮时，将链接复制到剪贴板并显示相应的成功与否的提示
+// @author       ZDY
+// @icon         https://markdown.com.cn/hero.png
 // @match      *://*/*
 // @grant        GM_setClipboard
 // ==/UserScript==
+
 
 (function() {
     'use strict';
