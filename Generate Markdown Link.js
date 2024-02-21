@@ -17,7 +17,7 @@
     const buttonStyle = `
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        left: 20px;
         z-index: 10000;
         padding: 5px 10px; /* 调小按钮大小 */
         background-color: #4CAF50;
@@ -57,7 +57,7 @@
 
     // 创建复制按钮
     const copyButton = document.createElement('button');
-    copyButton.innerHTML = '生成Markdown链接'';
+    copyButton.innerHTML = 'Markdown-Link';
     copyButton.style.cssText = buttonStyle;
 
     // 创建显示Markdown链接的元素
