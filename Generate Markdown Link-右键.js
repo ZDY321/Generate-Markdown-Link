@@ -8,7 +8,6 @@
 // @match        *://*/*
 // @grant        GM_setClipboard
 // ==/UserScript==
-
 (function() {
     'use strict';
 
