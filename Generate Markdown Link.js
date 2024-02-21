@@ -16,16 +16,16 @@
     // 创建右下角按钮样式
     const buttonStyle = `
         position: fixed;
-        bottom: 20px;
+        bottom: 40px;
         left: 20px;
         z-index: 10000;
-        padding: 5px 10px; /* 调小按钮大小 */
+        padding: 2px 5px; /* 调小按钮大小 */
         background-color: #4CAF50;
         color: white;
         border: none;
         cursor: pointer;
         border-radius: 5px;
-        font-size: 12px; /* 调小文字大小 */
+        font-size: 9px; /* 调小文字大小 */
     `;
 
     // 创建复制按钮样式
