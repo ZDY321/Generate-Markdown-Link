@@ -38,6 +38,7 @@
         border: 1px solid black; /* 黑色边框 */
         border-radius: 4px; /* 圆角 */
         padding: 2px 5px; /* 内边距 */
+        background-color: #ffffff;  /* 输入框背景颜色 */
     `;
 
     // 调整宽度为固定值以减少右侧边距；“底部距离”和“字体大小”输入框样式
@@ -46,6 +47,7 @@
         border: 1px solid black; /* 加上黑色边框 */
         border-radius: 4px; /* 设置圆角 */
         padding: 2px 5px; /* 添加内边距 */
+        background-color: #ffffff;  /* 输入框背景颜色 */
     `;
 
     // 创建设置面板样式，修改为在页面中央显示
