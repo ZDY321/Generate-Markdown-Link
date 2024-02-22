@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Markdown Link Generator with Enhanced Settings Panel
+// @name         Markdown Link Generator with Adjusted Settings Panel Input Margins
 // @namespace    http://tampermonkey.net/
-// @version      1.6
-// @description  获取当前网站的网址和标题，并在页面中央显示Markdown格式的链接，以及一个复制按钮。现在当用户右键点击按钮时，设置面板会在页面中央显示，允许调整按钮位置和样式，输入栏现在有了黑边和圆角。
+// @version      1.8
+// @description  获取当前网站的网址和标题，并在页面中央显示Markdown格式的链接，以及一个复制按钮。现在设置面板中的输入框、选择框和按钮都有了黑色边框和圆角，且输入框的右侧间隔被调整。
 // @author       ZDY
 // @icon         https://markdown.com.cn/hero.png
 // @match        *://*/*
@@ -33,6 +33,21 @@
         `;
     }
 
+    // 通用样式，用于输入框、选择框和按钮
+    const commonStyle = `
+        border: 1px solid black; /* 黑色边框 */
+        border-radius: 4px; /* 圆角 */
+        padding: 2px 5px; /* 内边距 */
+    `;
+
+    // 输入框样式，调整宽度为固定值以减少右侧边距
+    const inputStyle = `
+        width: 120px; /* 设置输入框的固定宽度 */
+        border: 1px solid black; /* 加上黑色边框 */
+        border-radius: 4px; /* 设置圆角 */
+        padding: 2px 5px; /* 添加内边距 */
+    `;
+
     // 创建设置面板样式，修改为在页面中央显示
     const settingsPanelStyle = `
         position: fixed;
@@ -41,18 +56,10 @@
         transform: translate(-50%, -50%);
         z-index: 10001;
         background-color: white;
-        border: 1px solid #ddd;
-        padding: 20px;
+        border: 1px solid black;
+        padding: 10px;
         border-radius: 5px;
         display: none;
-    `;
-
-    // 输入框样式
-    const inputStyle = `
-        width: 50%; /* 设置输入框的宽度 */
-        border: 1px solid black; /* 加上黑色边框 */
-        border-radius: 4px; /* 设置圆角 */
-        padding: 2px 5px; /* 添加内边距 */
     `;
 
     // 创建复制按钮样式
@@ -88,7 +95,7 @@
     settingsPanel.innerHTML = `
         <div>
             <label for="positionSelect">按钮位置:</label>
-            <select id="positionSelect">
+            <select id="positionSelect" style="${commonStyle}">
                 <option value="left">左</option>
                 <option value="right">右</option>
             </select>
@@ -101,7 +108,7 @@
             <label for="fontSizeInput">字体大小(px):</label>
             <input type="number" id="fontSizeInput" value="${buttonFontSize}" style="${inputStyle}">
         </div>
-        <button id="saveSettings">保存设置</button>
+        <button id="saveSettings" style="${commonStyle}">保存设置</button>
     `;
 
     // 创建复制按钮
