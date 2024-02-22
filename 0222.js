@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Markdown Link Generator with Centered Settings
+// @name         Markdown Link Generator with Enhanced Settings Panel
 // @namespace    http://tampermonkey.net/
-// @version      1.5
-// @description  获取当前网站的网址和标题，并在页面中央显示Markdown格式的链接，以及一个复制按钮。现在当用户右键点击按钮时，设置面板会在页面中央显示，允许调整按钮位置和样式。
+// @version      1.6
+// @description  获取当前网站的网址和标题，并在页面中央显示Markdown格式的链接，以及一个复制按钮。现在当用户右键点击按钮时，设置面板会在页面中央显示，允许调整按钮位置和样式，输入栏现在有了黑边和圆角。
 // @author       ZDY
 // @icon         https://markdown.com.cn/hero.png
 // @match        *://*/*
@@ -40,11 +40,19 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10001;
-        background-color: #F4D45D;
-        border: 1px solid black;
-        padding: 8px;
-        border-radius: 8px;
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
         display: none;
+    `;
+
+    // 输入框样式
+    const inputStyle = `
+        width: 50%; /* 设置输入框的宽度 */
+        border: 1px solid black; /* 加上黑色边框 */
+        border-radius: 4px; /* 设置圆角 */
+        padding: 2px 5px; /* 添加内边距 */
     `;
 
     // 创建复制按钮样式
@@ -87,11 +95,11 @@
         </div>
         <div>
             <label for="bottomInput">底部距离(px):</label>
-            <input type="number" id="bottomInput" value="${buttonBottom}">
+            <input type="number" id="bottomInput" value="${buttonBottom}" style="${inputStyle}">
         </div>
         <div>
             <label for="fontSizeInput">字体大小(px):</label>
-            <input type="number" id="fontSizeInput" value="${buttonFontSize}">
+            <input type="number" id="fontSizeInput" value="${buttonFontSize}" style="${inputStyle}">
         </div>
         <button id="saveSettings">保存设置</button>
     `;
