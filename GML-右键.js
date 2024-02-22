@@ -9,12 +9,11 @@
 // @grant        GM_setClipboard
 // ==/UserScript==
 
-
 (function() {
     'use strict';
 
     let buttonPosition = 'left'; // 按钮初始位置
-    let buttonBottom = 40; // 按钮距底部距离
+    let buttonBottom = 55; // 按钮距底部距离
     let buttonFontSize = 9; // 按钮字体大小
 
     // 创建右下角按钮样式
@@ -34,16 +33,16 @@
         `;
     }
 
-    // 通用样式，用于输入框、选择框和按钮
+    // 通用样式，用于“按钮位置”和“保存设置”按钮
     const commonStyle = `
         border: 1px solid black; /* 黑色边框 */
         border-radius: 4px; /* 圆角 */
         padding: 2px 5px; /* 内边距 */
     `;
 
-    // 输入框样式，调整宽度为固定值以减少右侧边距
+    // 调整宽度为固定值以减少右侧边距；“底部距离”和“字体大小”输入框样式
     const inputStyle = `
-        width: 120px; /* 设置输入框的固定宽度 */
+        width: 150px; /* 设置输入框的固定宽度 */
         border: 1px solid black; /* 加上黑色边框 */
         border-radius: 4px; /* 设置圆角 */
         padding: 2px 5px; /* 添加内边距 */
@@ -56,7 +55,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10001;
-        background-color: white;
+        background-color: #ABB8C4;
         border: 1px solid black;
         padding: 10px;
         border-radius: 5px;
