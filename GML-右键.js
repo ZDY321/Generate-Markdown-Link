@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Markdown Link Generator with Adjusted Settings Panel Input Margins
+// @name         Markdown Link Generator
 // @namespace    http://tampermonkey.net/
 // @version      1.8
 // @description  获取当前网站的网址和标题，并在页面中央显示Markdown格式的链接，以及一个复制按钮。现在设置面板中的输入框、选择框和按钮都有了黑色边框和圆角，且输入框的右侧间隔被调整。
