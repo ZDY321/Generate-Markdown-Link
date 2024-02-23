@@ -26,7 +26,7 @@
             padding: 2px 5px;
             background-color: #4CAF50;
             color: white;
-            border: none;
+            border: 1px solid black;
             cursor: pointer;
             border-radius: 5px;
             font-size: ${buttonFontSize}px;
@@ -89,6 +89,7 @@
         border-radius: 5px;
         display: none;
         font-size: 10px;
+        color: black;
     `;
 
     // 创建设置面板
